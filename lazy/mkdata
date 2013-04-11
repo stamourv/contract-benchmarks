@@ -1,0 +1,22 @@
+#!/bin/sh
+
+cd trace
+g++ cover.cpp
+
+./a.out elephant.pgm 3 20
+mv data ../elephant.trace
+gzip -f elephant.trace
+
+./a.out elephant-big.pgm 10 50
+mv data ../elephant-big.trace
+gzip -f elephant-big.trace
+
+./a.out bird.pgm 10 100
+mv data ../bird.trace
+gzip -f bird.trace
+
+./a.out koala-face.pgm 15 50
+mv data ../koala-face.trace
+gzip -f koala-face.trace
+
+rm -f a.out out-sub.ppm out.ppm
