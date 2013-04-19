@@ -1,0 +1,38 @@
+Science Collection
+Version 4.2
+
+  The Science Collection is a collection of modules that provide functions for
+numerical computing. The structure of the Science Collection and many of the
+underlying algorithms were inspired by the GNU Scientific Library (GSL). The
+functions are written entirely in Racket and present a true Racket look-and-feel
+throughout. The source code is distributed with the Science Collection and
+licensed under the GNU Lesser General Public License (LGPL), Version 3.
+
+  The motivation behind the Science Collection is to provide a numerical frame-
+work for knowledge-based simulation in Racket. Indeed, many of the routines were
+originally developed as part of the Simulation Collection. It was noted that
+that much of the functionality (e.g. random number generation, random distribu-
+tions, histograms, and statistics) did not depend on, or could be separated
+from, the underlying simulation engine. When this was done, it was further noted
+that this functionality represented a subset of the functionality in the GSL. At
+that point, it was decided to use the structure, and to the extent practical,
+the algorithms of the GSL as a reference model. Thus, the Science Collection was
+born.
+
+  The Science Collection covers a range of topics in numerical computing.
+Functions are available for the following areas:
+
+    * Mathematical Constants and Functions
+    * Special Functions
+    * Fast Fourier Transforms
+    * Random Number Generation
+    * Random Distributions
+    * Statistics
+    * Histograms
+    * Ordinary Differential Equations
+    * Chebyshev Approximations
+    * Physical Constants
+
+  The complete reference manual for the Science Collection is available in HTML
+format in the Racket Help Desk or the PLaneT web site.  Or, you can contact the
+author at m.douglas.williams@gmail.com for a copy.

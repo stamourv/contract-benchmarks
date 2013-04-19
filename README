@@ -6,5 +6,9 @@ T. Stephen Strickland, Sam Tobin-Hochstadt, Robert Bruce Findler, and Matthew
 Flatt. OOPSLA 2012.
 
 Include frozen version of collects that the benchmarks depend on.
+
 `plot' and `lazy' frozen on Apr. 10, 2013.
 Commit 3feb6cf039c90486616f65b62059dc4cad9bdc13.
+
+`ode' frozen on Apr. 19, 2013.
+Commit 341528065735f8390dbad87f49646580096a6a0d.
