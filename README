@@ -10,5 +10,5 @@ Include frozen version of collects that the benchmarks depend on.
 `plot' and `lazy' frozen on Apr. 10, 2013.
 Commit 3feb6cf039c90486616f65b62059dc4cad9bdc13.
 
-`ode' frozen on Apr. 19, 2013.
-Commit 341528065735f8390dbad87f49646580096a6a0d.
+`ode' and `tr' frozen on Apr. 23, 2013.
+Commit 1f3e38d305eefd4e79615688e6327e8b3c8faec0.
