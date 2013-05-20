@@ -3,5 +3,5 @@
 (require "utils.rkt")
 
 (call-with-frozen-collects
- "./slideshow/" '("slideshow" "pict")
+ "./slideshow/" '("slideshow" "pict" "racket/draw")
  (lambda () (dynamic-require "slideshow/main.rkt" #f)))

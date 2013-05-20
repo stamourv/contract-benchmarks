@@ -3,5 +3,5 @@
 (require "utils.rkt" "guide/guide.rkt")
 
 (call-with-frozen-collects
- "./guide/" '("scribble" "scribblings")
+ "./guide/" '("scribble" "scribblings" "racket/draw")
  (lambda () (render-guide)))
