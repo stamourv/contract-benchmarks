@@ -85,7 +85,11 @@
    [("+m" "++main-xref-in") ("load format-speficic cross-ref info for"
                              "all installed library collections")
     (current-xref-input-modules
-     (cons (cons 'setup/xref 'load-collections-xref) (current-xref-input-modules)))]
+     (current-xref-input-modules)
+     ;; stamourv: stubbed out xref. this is pre-package-split, not compatible with
+     ;;  post-package-split `setup'
+     ;; (cons (cons 'setup/xref 'load-collections-xref) (current-xref-input-modules))
+     )]
    [("++xref-in") module-path proc-id ("load format-specific cross-ref info by"
                                        "calling <proc-id> as exported by <module-path>")
     (let ([mod (read-one module-path)]
