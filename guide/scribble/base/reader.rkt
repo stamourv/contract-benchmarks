@@ -32,8 +32,9 @@
 (define (scribble-base-info)
   (lambda (key defval default)
     (case key
-      [(drracket:toolbar-buttons)
-       (dynamic-require 'scribble/tools/drracket-buttons 'drracket-buttons)]
+      ;; stamourv: stub out drracket tool, brings in setup and others
+      ;; [(drracket:toolbar-buttons)
+      ;;  (dynamic-require 'scribble/tools/drracket-buttons 'drracket-buttons)]
       [else ((scribble-base-reader-info) key defval default)])))
 
 (define (scribble-base-language-info)
