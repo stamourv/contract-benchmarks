@@ -1,6 +1,9 @@
 #lang scribble/doc
 @(require scribble/manual scribble/eval "guide-utils.rkt" "contracts-utils.rkt"
-          (for-label framework/framework racket/contract racket/gui))
+          @; stamourv: stubbed out dependencies that looped back to scribble
+          @;  and expect a recent scribble
+          @; (for-label framework/framework racket/contract racket/gui)
+          )
 
 @title[#:tag "contracts-general-functions"]{Contracts on Functions in General}
 

@@ -1,6 +1,9 @@
 #lang scribble/doc
 @(require scribble/manual scribble/eval "guide-utils.rkt"
-          (for-label racket/flonum racket/future future-visualizer))
+          @; stamourv: stubbed out dependencies that looped back to scribble
+          @;  and expect a recent scribble
+          @; (for-label racket/flonum racket/future future-visualizer)
+          )
 
 @(define future-eval (make-base-eval))
 @(interaction-eval #:eval future-eval (require racket/future 
