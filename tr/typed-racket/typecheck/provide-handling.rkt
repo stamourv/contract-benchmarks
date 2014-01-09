@@ -96,23 +96,17 @@
                           [export-id new-id]
                           [module-source pos-blame-id]
                           [the-contract (generate-temporary 'generated-contract)])
+             ;; stamourv: backporting changes. no idea whether this code is right
              #`(begin
                  (define the-contract #,cnt)
-                 (define-syntax cnt-id
-                   (make-provide/contract-transformer
-                    (quote-syntax the-contract)
-                    (datum->syntax ; preserve source location in expanded code
-                     (quote-syntax id)
-                     (syntax->datum (quote-syntax id))
-                     (list (quote-source-file id)
-                           (quote-line-number id)
-                           (quote-column-number id)
-                           (quote-character-position id)
-                           (quote-character-span id))
-                     (quote-syntax id))
-                    (quote-syntax export-id)
-                    (quote-syntax module-source)))
-                 (def-export export-id id cnt-id)))
+                 (define-module-boundary-contract cnt-id
+                   id the-contract
+                   #:pos-source module-source
+                   #:srcloc (vector '#,(syntax-source #'id)
+                                    #,(syntax-line #'id)
+                                    #,(syntax-column #'id)
+                                    #,(syntax-position #'id)
+                                    #,(syntax-span #'id)))))
            new-id
            null)]
          [(def-binding id ty)
