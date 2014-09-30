@@ -44,7 +44,7 @@
     (match v
       [(? (lambda (e)
             (or (number? e) (string? e) (char? e) (symbol? e)
-                (null? e) (regexp? e) (undefined? e) (path? e)
+                (null? e) (regexp? e) (eq? undefined e) (path? e)
 		(regexp? e) (keyword? e) (bytes? e) (boolean? e) (void? e))))
        v]
       [(cons x y) (cons (t x) (t y))]
