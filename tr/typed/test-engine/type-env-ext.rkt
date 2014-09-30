@@ -20,7 +20,7 @@
    [(syntax-parse (local-expand #'(ce:check-expect 1 1) 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ _))
+         (let* ((_ _) (_ _))
            (when _
              (insert-test _ (lambda () (check-values-expected _ _ _ _))))))
        #'insert-test])
@@ -29,7 +29,7 @@
    [(syntax-parse (local-expand #'(ce:check-expect 1 1) 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ (nvv _ _ builder _)))
+         (let* ((_ _) (_ (nvv _ _ builder _)))
            _))
        #'builder])
     (-> Univ)]
@@ -37,7 +37,7 @@
    [(syntax-parse (local-expand #'(ce:check-expect 1 1) 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ _))
+         (let* ((_ _) (_ _))
            (when _
              (insert-test _ (lambda () (check-values-expected _ _ _ _))))))
        #'check-values-expected])
@@ -46,7 +46,7 @@
    [(syntax-parse (local-expand #'(ce:check-within 1 1 1) 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ _))
+         (let* ((_ _) (_ _))
            (when _
              (insert-test _ (lambda () (check-values-within _ _ _ _ _))))))
        #'check-values-within])
@@ -55,7 +55,7 @@
    [(syntax-parse (local-expand #'(ce:check-error 1 "foo") 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ _))
+         (let* ((_ _) (_ _))
            (when _
              (insert-test _ (lambda () (check-values-error _ _ _ _))))))
        #'check-values-error])
@@ -64,7 +64,7 @@
    [(syntax-parse (local-expand #'(ce:check-range 1 1 1) 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ _))
+         (let* ((_ _) (_ _))
            (when _
              (insert-test _ (lambda () (check-range-values-expected _ _ _ _ _))))))
        #'check-range-values-expected])
@@ -73,7 +73,7 @@
    [(syntax-parse (local-expand #'(ce:check-member-of 1 1) 'module #f)
       #:literals (let* when define-values)
       [(define-values _
-         (let* ((_ _))
+         (let* ((_ _) (_ _))
            (when _
              (insert-test _ (lambda () (check-member-of-values-expected _ _ _ _ _))))))
        #'check-member-of-values-expected])
