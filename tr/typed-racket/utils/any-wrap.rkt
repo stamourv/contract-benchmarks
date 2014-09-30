@@ -1,9 +1,7 @@
 #lang racket/base
 
 (require racket/match racket/contract/base racket/contract/combinator
-         racket/promise)
-
-(define undef (letrec ([x x]) x))
+         racket/promise racket/undefined)
 
 (define (traverse b)
   (define (fail v)
@@ -46,7 +44,7 @@
     (match v
       [(? (lambda (e)
             (or (number? e) (string? e) (char? e) (symbol? e)
-                (null? e) (regexp? e) (eq? undef e) (path? e)
+                (null? e) (regexp? e) (undefined? e) (path? e)
 		(regexp? e) (keyword? e) (bytes? e) (boolean? e) (void? e))))
        v]
       [(cons x y) (cons (t x) (t y))]
